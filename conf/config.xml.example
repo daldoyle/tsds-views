@@ -1,0 +1,12 @@
+<config>
+  <daemon>
+    <pid-file>/var/run/tsds-views-daemon.pid</pid-file>
+  </daemon>
+  <worker>
+    <pid-file>/var/run/tsds-views-worker.pid</pid-file>
+    <num-processes>4</num-processes>
+  </worker>
+  <mongo username="needs_rw" password="password" host="127.0.0.1" port="27017" />
+  <rabbit host="127.0.0.1" port="5672" queue="tsds_views" />
+  <tsds cloud="cloud" username="needs_access_to_tsds_services" password="pass" realm="realm" />
+</config>
